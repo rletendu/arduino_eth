@@ -9,6 +9,8 @@ Plug the Ethernet shield onto the UNO and connect the network cable. The shield 
 
 The LED is wired between pins A0 (anode, +) and A1 (cathode), with a series resistor of about 220 ohms. If it does not light up, flip it around.
 
+A 0.96" SSD1306 128x64 OLED (I2C, address 0x3C) shows the status: chip, DHCP/static, IP address, link state, LED state and uptime. Wire it as VCC -> 5V, GND -> GND, SDA -> A4, SCL -> A5.
+
 ## Commands
 ```
 pio run                 # build
