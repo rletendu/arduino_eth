@@ -1,15 +1,17 @@
 # arduino_eth
 
-Projet PlatformIO : Arduino UNO + shield Ethernet Wiznet (W5100 / W5500).
+PlatformIO project: Arduino UNO + Wiznet Ethernet shield (W5100 / W5500).
 
-Le firmware obtient une IP par DHCP (repli sur 192.168.1.177) et sert une page web sur le port 80.
+The firmware obtains an IP address via DHCP (falling back to 192.168.1.177) and serves a web page on port 80. The page shows the IP address and uptime, and has a button to turn an LED on and off.
 
-## Montage
-Enficher le shield Ethernet sur l'UNO et brancher le câble réseau. Le shield utilise SPI (pins 11/12/13) et CS sur la pin 10 ; ne pas les utiliser pour autre chose (la pin 4 est le CS de la carte SD).
+## Wiring
+Plug the Ethernet shield onto the UNO and connect the network cable. The shield uses SPI (pins 11/12/13) and CS on pin 10; do not use these for anything else (pin 4 is the SD card CS).
 
-## Commandes
+The LED is wired between pins A0 (anode, +) and A1 (cathode), with a series resistor of about 220 ohms. If it does not light up, flip it around.
+
+## Commands
 ```
-pio run                 # compiler
-pio run -t upload       # flasher
-pio device monitor      # moniteur série (115200)
+pio run                 # build
+pio run -t upload       # flash
+pio device monitor      # serial monitor (115200)
 ```

@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-PlatformIO project (env `uno`: atmelavr / Arduino framework) for an Arduino UNO with a Wiznet Ethernet shield (W5100/W5500). The firmware gets an IP via DHCP (falls back to static 192.168.1.177) and serves a small HTML status page (IP + uptime) on port 80. README and serial/user-facing strings are in French.
+PlatformIO project (env `uno`: atmelavr / Arduino framework) for an Arduino UNO with a Wiznet Ethernet shield (W5100/W5500). The firmware gets an IP via DHCP (falls back to static 192.168.1.177) and serves a small HTML status page (IP + uptime) on port 80. Code comments, README and serial/user-facing strings are in English.
 
 ## Commands
 
